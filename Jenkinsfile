@@ -57,7 +57,7 @@ pipeline {
                     }
                 }
             }
-        } 
+        }
 
 
       stage('Docker Build and Push') {
@@ -66,13 +66,13 @@ pipeline {
           sh 'docker build -t vemuladivya/restaurant-listing-service:${VERSION} .'
           sh 'docker push vemuladivya/restaurant-listing-service:${VERSION}'
       }
-    } 
+    }
 
 
      stage('Cleanup Workspace') {
       steps {
         deleteDir()
-       
+
       }
     }
 
